@@ -2,20 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: "Galaxie Copernicus";
+  src: url("/fonts/GalaxieCopernicus-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+
+/* Global Styles */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Galaxie Copernicus", serif;
+  }
+}
+@layer utilities {
+  .custom-button {
+    @apply text-lg px-4 py-5 border-2 font-semibold border-[#b7b4b4] text-[#616163] bg-[#F3F0ED] hover:bg-gray-100 transition-colors duration-200;
+  }
+  .custom-text{
+    /* change the color to #737373 to achieve the perfect look shown in the figma file I have slgightly modified for accessibility */
+    @apply text-[#616163]
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.content {
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1800px;
+    padding: 0 2rem; 
+  }
+}
+
+
+
