@@ -76,6 +76,9 @@ export default function Home() {
       <section className="">
         <div>
           <ContentSection {...SECTIONS.fireplaces} />
+          <div>
+            <ContentSection {...SECTIONS.lighting} />
+          </div>
           <ProductGrid
             title="Our latest chimneypieces"
             products={mockChimneyPieces}
@@ -88,10 +91,6 @@ export default function Home() {
             aspect="portrait"
             imageFit="cover"
           />
-        </div>
-
-        <div>
-          <ContentSection {...SECTIONS.lighting} />
         </div>
 
         <div>
