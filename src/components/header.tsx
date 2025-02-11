@@ -4,13 +4,13 @@ import { Mail, Search, Menu } from "lucide-react";
 
 export function Header() {
   return (
-    <header className="fixed con top-0 left-0 w-full bg-white shadow-md z-50">
+    <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
           <Link href="/" className="flex items-center gap-2">
             {/* If you enable the logo, ensure correct sizing */}
             {/* <Image src="/logo.png" alt="Logo" width={40} height={40} /> */}
-            <h1 className="text-2xl sm:text-3xl tracking-tight text-gray-900">
+            <h1 className="text-2xl sm:text-3xl !font-extrabold tracking-tight text-gray-900">
               Jamb.
             </h1>
           </Link>

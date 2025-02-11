@@ -1,5 +1,4 @@
 import { ProductGrid } from "@/sections/product-grid";
-import { Header } from "@/components/header";
 import { ContentSection } from "@/sections/content-section";
 import HeroSection from "@/sections/hero-section";
 
@@ -13,7 +12,7 @@ import {
 // we can change the text alignment for each section as neededfor now the first one is left aligned and the rest are center aligned
 const SECTIONS = {
   fireplaces: {
-    textAlign: "left" as const,
+    textAlign: "center" as const,
     title: "Fireplaces",
     description:
       "Experience the warmth and elegance of our handcrafted fireplaces, designed to enhance your living space, Experience the warmth and elegance of our handcrafted fireplaces, designed to enhance your living space.",
@@ -71,7 +70,6 @@ const SECTIONS = {
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Header />
       <HeroSection />
       <section className="">
         <div>

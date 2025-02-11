@@ -3,6 +3,7 @@ import type React from "react";
 import "./globals.css";
 import Footer from "@/components/footer";
 import { Lora } from "next/font/google";
+import { Header } from "@/components/header";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -73,6 +74,7 @@ export default function RootLayout({
       <body
         className={`font-copernicus font-fallback ${lora.variable} scroll-smooth`}
       >
+        <Header />
         {children}
         <Footer />
       </body>

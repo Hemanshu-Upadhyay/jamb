@@ -45,7 +45,7 @@ export function ContentSection({
               } space-y-6`}
             >
               {subtitle && (
-                <h2 className="text-lg md:text-xl font-medium text-gray-600">
+                <h2 className="text-lg md:text-xl font-semibold text-gray-600">
                   {subtitle}
                 </h2>
               )}
